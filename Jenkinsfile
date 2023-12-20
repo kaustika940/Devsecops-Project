@@ -70,7 +70,7 @@ stage('Deploy to container'){
                 sh 'docker run -d --name mygame -p 3000:3000 kaustika1997/devsecops_ad:latest'
             }
         }
-stage('Deploy to kubernets'){
+stage('Deploy to kubernetes'){
             steps{
                 script{
                     withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'k8s', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
